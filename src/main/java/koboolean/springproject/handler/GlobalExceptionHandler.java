@@ -1,4 +1,4 @@
-package koboolean.springproject.controller;
+package koboolean.springproject.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,5 +19,11 @@ public class GlobalExceptionHandler {
                         "message", "uploaded file is too large",
                         "urls", List.of()
                 ));
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<Map<String, Object>> handleRuntimeException(RuntimeException e){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                .body(Map.of("message", "실행 중 이상발생"));
     }
 }

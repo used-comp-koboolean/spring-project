@@ -8,7 +8,7 @@ spring:
 
 file:
   upload:
-    path: ./src/main/resources/static/uploads
+    path: ./uploads
 
 server:
   tomcat:
