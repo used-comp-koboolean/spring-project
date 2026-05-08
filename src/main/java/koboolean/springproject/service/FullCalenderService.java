@@ -5,5 +5,5 @@ import koboolean.springproject.domains.dto.CalEvent;
 import java.util.List;
 
 public interface FullCalenderService {
-    List<CalEvent> list();
+    List<CalEvent> list(String year);
 }

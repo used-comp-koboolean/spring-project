@@ -16,10 +16,10 @@ public class FullCalenderController {
 
     private final FullCalenderService fullCalenderService;
 
-    @GetMapping("/api/full/{month}")
-    public ResponseEntity<List<CalEvent>> list(@PathVariable String month){
+    @GetMapping("/api/full/{year}")
+    public ResponseEntity<List<CalEvent>> list(@PathVariable String year){
 
-        List<CalEvent> events = fullCalenderService.list();
+        List<CalEvent> events = fullCalenderService.list(year);
 
         return ResponseEntity.ok(events);
     }

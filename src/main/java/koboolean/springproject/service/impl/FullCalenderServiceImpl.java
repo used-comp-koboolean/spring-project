@@ -17,7 +17,7 @@ public class FullCalenderServiceImpl implements FullCalenderService {
 
 
     @Override
-    public List<CalEvent> list() {
+    public List<CalEvent> list(String year) {
 
         List<CalEvent> events = new ArrayList<>();
 
